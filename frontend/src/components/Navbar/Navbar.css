@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    /* background-color: yellow; */
+    z-index: 5;
+    padding-left: 300px;
+    padding-right: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+    font-family: 'Poppins', sans-serif;
+}
+.nav_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_content ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav_content ul .logo{
+    font-size: 40px;
+}
+.logo{
+    font-family: 'Rubik Mono One', monospace;
+}
+.logo:hover{
+    cursor: pointer;
+}
+.right{
+    display: flex;
+    gap: 20px;
+    color: #19303d;
+    font-weight: 600;
+    font-size: 20px;
+}
+.left li:hover{
+    cursor: pointer;
+}
+.btn{
+    background-color: #ffffff;
+    padding-inline: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.btn:hover{
+    background-color: #142935;
+    color: white;
+    cursor: pointer;
+}
