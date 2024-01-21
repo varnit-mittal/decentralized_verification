@@ -8,6 +8,7 @@ import Dashboard_user from "./pages/Dashboard_user";
 import Dashboard_org from "./pages/Dashboard_org";
 import Add_user from "./pages/Add_user";
 import Add_new_id from "./pages/Add_new_id";
+import Loadingpage from "./pages/Loadingpage";
 
 
 
@@ -29,6 +30,7 @@ const App = () =>{
 <Route path="/Dashboard_org" element={<Dashboard_org />} />
 <Route path="/Add_user" element={<Add_user />} />
 <Route path="/Add_new_id" element={<Add_new_id />} />
+<Route path="/Loadingpage" element={<Loadingpage />} />
 
 
 

@@ -40,6 +40,17 @@ const UserSignup = () => {
           />
         </div>
         <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+            Email
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="text"
+            id="name"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="dob">
             Date of Birth
           </label>
@@ -50,7 +61,7 @@ const UserSignup = () => {
           />
         </div>
         {/* link it  */}
-        <Link to="/Dashboard_user" >
+        <Link to="/Loadingpage" >
                 <button
           className="bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer"
           onClick={connectWallet}

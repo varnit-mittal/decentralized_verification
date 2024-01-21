@@ -42,7 +42,7 @@ const OrganizationSignup = () => {
 />
 
         </div>
-        <Link to="/Dashboard_org" >
+        <Link to="/Loadingpage" >
         <button
           className="bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer"
           onClick={connectWallet}

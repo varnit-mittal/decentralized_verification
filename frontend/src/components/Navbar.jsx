@@ -3,6 +3,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import logo from "../../images/logo.png";
+import { HashLink } from 'react-router-hash-link';
 
 const NavBarItem = ({ title, classprops,link }) => (
   <Link to={link}>
@@ -28,15 +29,15 @@ const Navbar = ({ value }) => {
       <Link to='/'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>Home</li>
   </Link>
-  <Link to='/'>
+  <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
-  </Link>
+  </HashLink>
   <Link to='/'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Developers</li>
   </Link>
-  <Link to='/'>
+  <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Contact us</li>
-  </Link>
+  </HashLink>
         {/* Conditionally render Signup button based on the 'value' prop */}
         {value && (
           <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
@@ -65,15 +66,15 @@ const Navbar = ({ value }) => {
               <Link to='/'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}Home></li>
   </Link>
-  <Link to='/'>
+  <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
-  </Link>
+  </HashLink>
   <Link to='/'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Developers</li>
   </Link>
-  <Link to='/'>
+  <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Contact us</li>
-  </Link>
+  </HashLink>
 
             {/* Conditionally render Signup button in the mobile menu based on the 'value' prop */}
             {value && (
