@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import { Navbar, Welcome, Footer, Services } from "../components"
-=======
 import React from 'react';
 import { Navbar } from "../components";
 
 //IMPORT LINKK
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
->>>>>>> 03035271f1f1e87a6bbd75754f63709474fac3f8
 const DashboardOrg = () => {
   return (
     <div className="relative gradient-bg-welcome w-full h-screen flex flex-col items-center ">
