@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 //import navabar
-import { Navbar, Welcome, Footer, Services } from "../components"
+import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
 import logo from '../../images/logo.png';   
 
-const UserSignup = () => {
+const Add_user = () => {
     const [walletAddress,setWalletAddress]=useState("");
 
     const connectWallet = async () => {
@@ -26,7 +26,7 @@ const UserSignup = () => {
         className=" p-8 rounded-md shadow-md gradient-bg-welcome "
         style={{ height: '300px' ,width: '600px'  }}
       >
-    <h2 className="text-3xl mb-6 font-bold">User Signup</h2>
+    <h2 className="text-3xl mb-6 font-bold">Add User</h2>
 
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
@@ -36,17 +36,18 @@ const UserSignup = () => {
             className="border rounded-md w-full py-2 px-3"
             type="text"
             id="name"
-            placeholder="Enter your name"
+            placeholder="Enter  name"
           />
         </div>
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="dob">
-            Date of Birth
+           ID Number
           </label>
           <input
             className="border  rounded-md w-full py-2 px-3 text-black"
-            type="date"
+            type="integer"
             id="dob"
+            placeholder="Enter id number "
           />
         </div>
         {/* link it  */}
@@ -64,4 +65,4 @@ const UserSignup = () => {
   );
 };
 
-export default UserSignup;
+export default Add_user;
