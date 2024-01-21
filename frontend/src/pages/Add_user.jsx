@@ -23,10 +23,10 @@ const Add_user = () => {
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <div
-        className=" p-8 rounded-md shadow-md gradient-bg-welcome "
+        className=" p-8 rounded-md shadow-md gradient-bg-welcome absolute top-[200px] "
         style={{ height: '300px' ,width: '600px'  }}
       >
-    <h2 className="text-3xl mb-6 font-bold">Add User</h2>
+    <h2 className="text-3xl mb-6 font-bold">Issue Document</h2>
 
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
@@ -35,6 +35,39 @@ const Add_user = () => {
           <input
             className="border rounded-md w-full py-2 px-3"
             type="text"
+            id="name"
+            placeholder="Enter  name"
+          />
+        </div>
+        <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+            Document Type
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="text"
+            id="name"
+            placeholder="Enter  name"
+          />
+        </div>
+        <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+            Wallet Address
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="text"
+            id="name"
+            placeholder="Enter  name"
+          />
+        </div>
+        <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+            Date of Birth
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3 text-black"
+            type="date"
             id="name"
             placeholder="Enter  name"
           />
@@ -57,7 +90,7 @@ const Add_user = () => {
           onClick={connectWallet}
         >
 
-          Sign Up
+        Submit
         </button>
         </Link>
       </div>
