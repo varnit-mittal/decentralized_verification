@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom

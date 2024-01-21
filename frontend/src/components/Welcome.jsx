@@ -1,31 +1,41 @@
 /* eslint-disable no-unused-vars */
+// import { ethers } from 'ethers'
 import React, { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import { useState } from "react";
+import { ethers } from 'ethers';
 
 const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
-
+const RPC=import.meta.env.VITE_RPC;
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
 const Welcome=()=>{
   window.onload = () => {
     connectWallet(0);
   };
-  const [walletAddress,setWalletAddress]=useState("");
-
+  const [walletAddress,setWalletAddress]=useState("11");
   const connectWallet = async (x) => {
-      if((window.ethereum) )
+      if(window.ethereum)
       {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setWalletAddress(accounts[0]);
+
+        const providers = new ethers.providers.JsonRpcProvider(RPC)
+        const signer = providers.getSigner()
+        // const address = await signer.getAddress()
+        const y=await providers.getNetwork();
+        console.log(y)
+        const x=await providers.getBalance(accounts[0])
+        console.log(ethers.utils.formatEther(x))
       }
       else if(x)
       {
         if(window.confirm('Please install MetaMask'))
               window.location.assign("https://metamask.io/download/");
       }
+      
   }
   return(
     <div className="flex w-full justify-center items-center">
@@ -47,6 +57,7 @@ const Welcome=()=>{
             <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
               Reliability
+
             </div>
             <div className={companyCommonStyles}>Security</div>
             <div className={`sm:rounded-tr-2xl ${companyCommonStyles}`}>
