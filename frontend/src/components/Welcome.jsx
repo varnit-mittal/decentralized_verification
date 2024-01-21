@@ -10,13 +10,21 @@ const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(ad
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
 const Welcome=()=>{
+  window.onload = () => {
+    connectWallet(0);
+  };
   const [walletAddress,setWalletAddress]=useState("");
 
-  const connectWallet = async () => {
-      if(window.ethereum)
+  const connectWallet = async (x) => {
+      if((window.ethereum) )
       {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setWalletAddress(accounts[0]);
+      }
+      else if(x)
+      {
+        if(window.confirm('Please install MetaMask'))
+              window.location.assign("https://metamask.io/download/");
       }
   }
   return(
@@ -29,12 +37,11 @@ const Welcome=()=>{
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
             Verification rule - original documents uploaded by authorized organization cannot be manipulated by anyone on the blockchain.
           </p>
-          <button type="button" onClick={connectWallet} className="flex flex-row justify-center items-center 
+          <button type="button" onClick={()=>connectWallet(1)} className="flex flex-row justify-center items-center 
            my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
             <AiFillPlayCircle className="text-white mr-2" />
               <p className="text-white text-base font-semibold">
-
-                Connect Wallet
+                {walletAddress ? "Wallet Connected": "Connect Wallet"}
               </p>
             </button>
             <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">

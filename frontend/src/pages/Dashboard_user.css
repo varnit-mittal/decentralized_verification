@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #3498db;
+    color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    width: 220px; /* Adjust width as needed */
+    height: 300px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .card:hover {
+    background-color: #f0f7fe; /* Change to a darker shade or another color */
+  }
