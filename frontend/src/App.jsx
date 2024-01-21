@@ -1,22 +1,20 @@
-import "./App.css";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar, Welcome, Footer, Services, Transactions, Loader } from "./components"
 
-function App() {
+const App = () =>{
+
   return (
     <>
-      <div className="landing">
-        <Navbar />
-        <div className="main">
-          <div className="content">
-            gtyfhdijs
-            
-          </div>
+      <div className="min-h-screen">
+        <div className="gradient-bg-welcome">
+          <Navbar/>
+          <Welcome/>
         </div>
+        <Services/>
+        <Transactions/>
+        <Footer/>
       </div>
-      {/* <Footer /> */}
     </>
-  );
+  )
 }
 
-export default App;
+export default App
