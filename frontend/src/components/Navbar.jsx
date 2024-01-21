@@ -17,7 +17,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        {["Home", "What we do?", "Developers", "Contact us"].map((item, index) => (
+        {["Home", "What we do?", "Verify", "Contact us"].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
         ))}
         {/* Use Link for Signup button */}
@@ -40,7 +40,7 @@ const Navbar = () => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Home", "What we do?", "Developers", "Contact us"].map(
+            {["Home", "What we do?", "Verify", "Contact us"].map(
               (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
             )}
             {/* Use Link for Signup button in the mobile menu */}

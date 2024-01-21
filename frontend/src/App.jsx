@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Footer, Services, Transactions } from "./components"
+import { Navbar, Welcome, Footer, Services } from "./components"
 import Landingpage from "./pages/landingpage"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signup from "./pages/signup";
@@ -16,7 +16,6 @@ const App = () =>{
       
       <BrowserRouter>
         <Routes>
-        // Update the JSX element to use the correct component name
 <Route path="/" element={<Landingpage />} />
 
 <Route path="/Signup" element={<Signup />} />

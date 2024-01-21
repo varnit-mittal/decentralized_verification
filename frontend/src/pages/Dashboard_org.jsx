@@ -1,5 +1,4 @@
-import React from 'react';
-import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Navbar, Welcome, Footer, Services } from "../components"
 const DashboardOrg = () => {
   return (
     <div className=" relative gradient-bg-welcome w-full h-screen flex flex-col items-center ">

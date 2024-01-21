@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Navbar, Welcome, Footer, Services } from "../components"
 
 import './Dashboard_user.css';
 
