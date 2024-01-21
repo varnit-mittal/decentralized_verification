@@ -60,7 +60,7 @@ const Navbar = ({ value }) => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {/* {["Home", "What we do?", "Developers", "Contact us"].map(
+            {/* {["Home", "What we do?", "Verify", "Contact us"].map(
               (item, index) => <NavBarItem key={item + index} title={item}  />,
             )} */}
               <Link to='/'>

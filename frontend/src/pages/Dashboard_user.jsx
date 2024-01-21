@@ -4,6 +4,8 @@ import { Navbar, Welcome, Footer, Services } from "../components"
 import './Dashboard_user.css';
 
 const Dashboard_user = ({  }) => {
+  const documents = ["Document 1", "Document 2", "Document 3"];
+
   return (
     <div className=" relative gradient-bg-welcome w-full h-screen flex flex-col items-center ">
         <div className='absolute top-0 w-full'>
@@ -16,11 +18,13 @@ const Dashboard_user = ({  }) => {
         {/* Waving hand emoji */}
       
       </div>
-      <h3 className="text-4xl mb-2  font-bold absolute top-[350px] left-[800px]     text-white">Added Documents:</h3>
-      <div className="text-left text-2xl absolute bottom-[200px] flex justify-between text-black ">
-  <div className="card ">Document 1</div>
-  <div className="card">Document 2</div>
-  <div className="card">Document 3</div>
+      
+      <div className="text-left text-2xl absolute bottom-40 flex justify-between   text-black ">
+
+      <h3 className="text-4xl mb-2  font-bold absolute top-[-30%] left-[30%]   text-white">Added Documents:</h3>
+      {documents.map((document, index) => (
+            <div key={index} className="card">{document}</div>
+          ))}
 </div>
 
     </div>
