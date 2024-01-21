@@ -6,7 +6,7 @@ const Landingpage = () =>{
     <>
       <div className="min-h-screen">
         <div className="gradient-bg-welcome">
-          <Navbar/>
+          <Navbar value={"true"}/>
           <Welcome/>
         </div>
         <Services/>

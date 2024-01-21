@@ -3,6 +3,7 @@ import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { useState } from 'react';
 
+import logo from '../../images/logo.png';
 
 const OrganizationSignup = () => {
   const handleSignup = () => {
@@ -21,9 +22,9 @@ const OrganizationSignup = () => {
 
   return (
     <div className="relative gradient-bg-welcome h-screen flex flex-col justify-center text-white items-center">
-        <div className='absolute top-0 w-full'>
-    <Navbar/>
-        </div>
+      <div className="md:flex-[0.5] flex-initial justify-center items-center absolute top-0 left-80">
+        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+      </div>
       <div
         className=" p-8 rounded-md shadow-md gradient-bg-welcome "
         style={{ height: '300px' ,width: '600px'  }}

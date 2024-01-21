@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
 import logo from '../../images/logo.png';   
 
-const UserSignup = () => {
+const Add_new_id = () => {
     const [walletAddress,setWalletAddress]=useState("");
 
     const connectWallet = async () => {
@@ -30,24 +30,17 @@ const UserSignup = () => {
 
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
-            Name
+            ID  Name
           </label>
           <input
             className="border rounded-md w-full py-2 px-3"
             type="text"
             id="name"
-            placeholder="Enter your name"
+            placeholder="Enter your ID name"
           />
         </div>
         <div className="mb-6">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="dob">
-            Date of Birth
-          </label>
-          <input
-            className="border  rounded-md w-full py-2 px-3 text-black"
-            type="date"
-            id="dob"
-          />
+         
         </div>
         {/* link it  */}
         <Link to="/Dashboard_user" >
@@ -56,7 +49,7 @@ const UserSignup = () => {
           onClick={connectWallet}
         >
 
-          Sign Up
+          Submit
         </button>
         </Link>
       </div>
@@ -64,4 +57,4 @@ const UserSignup = () => {
   );
 };
 
-export default UserSignup;
+export default Add_new_id;
