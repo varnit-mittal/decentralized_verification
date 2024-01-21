@@ -1,12 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
 //import navabar
 import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+// const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
 
 const UserSignup = () => {
-  const handleSignup = () => {
-    // Handle user signup logic
-    console.log('User signed up!');
-  };
+    const [walletAddress,setWalletAddress]=useState("");
+
+    const connectWallet = async () => {
+        if(window.ethereum)
+        {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          setWalletAddress(accounts[0]);
+        }
+    }
 
   return (
     <div className="relative gradient-bg-welcome h-screen flex flex-col justify-center text-white items-center">
@@ -40,12 +48,16 @@ const UserSignup = () => {
             id="dob"
           />
         </div>
-        <button
+        {/* link it  */}
+        <Link to="/Dashboard_user" >
+                <button
           className="bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer"
-          onClick={handleSignup}
+          onClick={connectWallet}
         >
+
           Sign Up
         </button>
+        </Link>
       </div>
     </div>
   );

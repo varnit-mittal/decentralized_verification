@@ -1,5 +1,7 @@
 import React from 'react';
 import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { useState } from 'react';
 
 
 const OrganizationSignup = () => {
@@ -7,6 +9,15 @@ const OrganizationSignup = () => {
     // Handle organization signup logic
     console.log('Organization signed up!');
   };
+  const [walletAddress,setWalletAddress]=useState("");
+
+  const connectWallet = async () => {
+      if(window.ethereum)
+      {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        setWalletAddress(accounts[0]);
+      }
+  }
 
   return (
     <div className="relative gradient-bg-welcome h-screen flex flex-col justify-center text-white items-center">
@@ -30,12 +41,14 @@ const OrganizationSignup = () => {
 />
 
         </div>
+        <Link to="/Dashboard_org" >
         <button
           className="bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer"
-          onClick={handleSignup}
+          onClick={connectWallet}
         >
           Sign Up
         </button>
+        </Link>
       </div>
     </div>
   );

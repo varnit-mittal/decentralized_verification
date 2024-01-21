@@ -4,6 +4,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signup from "./pages/signup";
 import Usersignup from "./pages/Usersignup";
 import Organisationsignup from "./pages/Organizationsignup";
+import Dashboard_user from "./pages/Dashboard_user";
+import Dashboard_org from "./pages/Dashboard_org";
+
 
 
 const App = () =>{
@@ -19,6 +22,10 @@ const App = () =>{
 <Route path="/Signup" element={<Signup />} />
 <Route path="/Usersignup" element={<Usersignup />} />
 <Route path="/Organizationsignup" element={<Organisationsignup />} />
+
+<Route path="/Dashboard_user" element={<Dashboard_user />} />
+
+<Route path="/Dashboard_org" element={<Dashboard_org />} />
 
 
 
