@@ -1,0 +1,166 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_document",
+          "type": "string"
+        }
+      ],
+      "name": "addPermission",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "org",
+          "type": "string"
+        }
+      ],
+      "name": "add_authority",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "fetchSpecific",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "docType",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "docId",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "dob",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "org",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct organization.doc_info[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDocumnets",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "docType",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "docId",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "dob",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "org",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct organization.doc_info[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_document",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "doc_type",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_dob",
+          "type": "string"
+        }
+      ],
+      "name": "issueDocument",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "userType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
