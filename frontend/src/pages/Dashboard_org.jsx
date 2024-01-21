@@ -27,7 +27,7 @@ const DashboardOrg = () => {
       <div className="absolute bottom-16 flex justify-center w-full">
       <Link to="/Add_user" >
         <button className="bg-blue-500 text-white py-3 px-6 mr-8  rounded-full cursor-pointer hover:bg-blue-700">
-          Add ID
+         Issue Document
         </button>
 
         </Link>
