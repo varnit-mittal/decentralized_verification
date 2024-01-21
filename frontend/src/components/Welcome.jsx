@@ -6,29 +6,33 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import { useState } from "react";
 import { ethers } from 'ethers';
+import OrgAbi from '../../abi/organization.json'
 
 const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
 const RPC=import.meta.env.VITE_RPC;
+const ORGADDR=import.meta.env.VITE_ORG;
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
 const Welcome=()=>{
-  window.onload = () => {
-    connectWallet(0);
-  };
-  const [walletAddress,setWalletAddress]=useState("11");
+  // window.onload = () => {
+  //   connectWallet(0);
+  // };
+  const [walletAddress,setWalletAddress]=useState("");
   const connectWallet = async (x) => {
       if(window.ethereum)
       {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        // window.ethereum.enable();
         setWalletAddress(accounts[0]);
+        const provider=new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner()
+        const contract=new ethers.Contract(ORGADDR,OrgAbi,signer);
+        const user=await contract.userType(ethers.utils.getAddress(accounts[0])); 
+        console.log(user.toNumber());   
+        // console.log(ethers.utils.getAddress(accounts[0]))
+        // const user=await contract.userType(ethers.utils.getAddress(accounts[0]));
+        // console.log(user);
 
-        const providers = new ethers.providers.JsonRpcProvider(RPC)
-        const signer = providers.getSigner()
-        // const address = await signer.getAddress()
-        const y=await providers.getNetwork();
-        console.log(y)
-        const x=await providers.getBalance(accounts[0])
-        console.log(ethers.utils.formatEther(x))
       }
       else if(x)
       {
