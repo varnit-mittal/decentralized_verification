@@ -46,7 +46,7 @@ const UserSignup = () => {
           <input
             className="border rounded-md w-full py-2 px-3"
             type="text"
-            id="name"
+            id="email"
             placeholder="Enter your email"
           />
         </div>

@@ -46,7 +46,7 @@ const Add_user = () => {
           <input
             className="border rounded-md w-full py-2 px-3"
             type="text"
-            id="name"
+            id="d_type"
             placeholder="Enter  name"
           />
         </div>
@@ -57,7 +57,7 @@ const Add_user = () => {
           <input
             className="border rounded-md w-full py-2 px-3"
             type="text"
-            id="name"
+            id="address"
             placeholder="Enter  name"
           />
         </div>
@@ -68,7 +68,7 @@ const Add_user = () => {
           <input
             className="border rounded-md w-full py-2 px-3 text-black"
             type="date"
-            id="name"
+            id="dob"
             placeholder="Enter  name"
           />
         </div>
@@ -79,7 +79,7 @@ const Add_user = () => {
           <input
             className="border  rounded-md w-full py-2 px-3 text-black"
             type="integer"
-            id="dob"
+            id="id"
             placeholder="Enter id number "
           />
         </div>
