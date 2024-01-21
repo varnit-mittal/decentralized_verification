@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import logo from "../../images/logo.png";
 
 const NavBarItem = ({ title, classprops }) => (
@@ -20,8 +20,11 @@ const Navbar = () => {
         {["Home", "What we do?", "Developers", "Contact us"].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
         ))}
+        {/* Use Link for Signup button */}
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-          Signup
+          <Link to="/Signup" className="text-white">
+            Signup
+          </Link>
         </li>
       </ul>
       <div className="flex relative">
@@ -40,6 +43,12 @@ const Navbar = () => {
             {["Home", "What we do?", "Developers", "Contact us"].map(
               (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
             )}
+            {/* Use Link for Signup button in the mobile menu */}
+            <li className="my-2 text-lg">
+              <Link to="/signup" className="text-white" onClick={() => setToggleMenu(false)}>
+                Signup
+              </Link>
+            </li>
           </ul>
         )}
       </div>
