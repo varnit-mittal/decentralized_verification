@@ -33,7 +33,7 @@ const Navbar = ({ value }) => {
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
   </HashLink>
   <Link to='/'>
-  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Developers</li>
+  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Verify</li>
   </Link>
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Contact us</li>
@@ -70,7 +70,7 @@ const Navbar = ({ value }) => {
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
   </HashLink>
   <Link to='/'>
-  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Developers</li>
+  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Verify</li>
   </Link>
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Contact us</li>
