@@ -32,7 +32,7 @@ const Navbar = ({ value }) => {
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
   </HashLink>
-  <Link to='/'>
+  <Link to='/Verification'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Verify</li>
   </Link>
   <HashLink smooth to='//#wwd'>
@@ -69,7 +69,7 @@ const Navbar = ({ value }) => {
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
   </HashLink>
-  <Link to='/'>
+  <Link to='/Verification'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Verify</li>
   </Link>
   <HashLink smooth to='//#wwd'>
