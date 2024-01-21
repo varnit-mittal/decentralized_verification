@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Navbar, Welcome, Footer, Services} from "../components"
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 import logo from '../../images/logo.png';

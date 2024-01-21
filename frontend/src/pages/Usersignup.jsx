@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 //import navabar
-import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Navbar, Welcome, Footer, Services } from "../components"
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
 import logo from '../../images/logo.png';   
