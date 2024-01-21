@@ -32,8 +32,8 @@ const Navbar = ({ value }) => {
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
   </HashLink>
-  <Link to='/'>
-  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Developers</li>
+  <Link to='/Verification'>
+  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Verify</li>
   </Link>
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Contact us</li>
@@ -60,7 +60,7 @@ const Navbar = ({ value }) => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {/* {["Home", "What we do?", "Developers", "Contact us"].map(
+            {/* {["Home", "What we do?", "Verify", "Contact us"].map(
               (item, index) => <NavBarItem key={item + index} title={item}  />,
             )} */}
               <Link to='/'>
@@ -69,8 +69,8 @@ const Navbar = ({ value }) => {
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}>What we do?</li>
   </HashLink>
-  <Link to='/'>
-  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Developers</li>
+  <Link to='/Verification'>
+  <li className={`mx-4 cursor-pointer my-2 text-lg `}> Verify</li>
   </Link>
   <HashLink smooth to='//#wwd'>
   <li className={`mx-4 cursor-pointer my-2 text-lg `}> Contact us</li>
