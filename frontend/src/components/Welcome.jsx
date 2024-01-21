@@ -4,6 +4,9 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import { useState } from "react";
+
+const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
+
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
 const Welcome=()=>{
@@ -32,7 +35,8 @@ const Welcome=()=>{
             Verification rule - original documents uploaded by authorized organization cannot be manipulated by anyone on the blockchain.
           </p>
           <button type="button" onClick={connectWallet} className="flex flex-row justify-center items-center 
-           my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd] w-full">
+           my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
+            <AiFillPlayCircle className="text-white mr-2" />
               <p className="text-white text-base font-semibold">
 
                 Connect Wallet
@@ -66,8 +70,7 @@ const Welcome=()=>{
               </div>
               <div>
                 <p className="text-white font-light text-sm">
-                 currentAccount
-                {walletAddress}
+                {shortenAddress(walletAddress)}
                 </p>
                 <p className="text-white font-semibold text-lg mt-1">
                   Ethereum
