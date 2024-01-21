@@ -1,18 +1,23 @@
 import { Navbar, Welcome, Footer, Services, Transactions } from "./components"
+import Landingpage from "./pages/landingpage"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () =>{
 
   return (
     <>
-      <div className="min-h-screen">
-        <div className="gradient-bg-welcome">
-          <Navbar/>
-          <Welcome/>
-        </div>
-        <Services/>
-        <Transactions/>
-        <Footer/>
-      </div>
+      
+      <BrowserRouter>
+        <Routes>
+        // Update the JSX element to use the correct component name
+<Route path="/" element={<Landingpage />} />
+
+     
+          {/* <Route path="/login" element={<LoginPage />} />
+          <Route path="/SignUp" element={<SignUpPage />} /> */}
+          {/* Other routes go here */}
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
