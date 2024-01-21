@@ -3,8 +3,8 @@ import { Navbar, Welcome, Footer, Services } from "../components"
 
 import './Dashboard_user.css';
 
-const Dashboard_user = ({  }) => {
-  const documents = ["Document 1", "Document 2", "Document 3"];
+const Dashboard_user = ({ }) => {
+  const documents = [];
 
   return (
     <div className=" relative gradient-bg-welcome w-full h-screen flex flex-col items-center ">

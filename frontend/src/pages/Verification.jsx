@@ -3,48 +3,22 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // const shortenAddress = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 4)}`;
 import logo from '../../images/logo.png';   
 
-const UserSignup = () => {
+const Verification = () => {
     const [walletAddress,setWalletAddress]=useState("");
 
-    const connectWallet = async () => {
-        if(window.ethereum)
-        {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          setWalletAddress(accounts[0]);
-        }
+    const verify = async () => {
+        
     }
-
-    // <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-    //         <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
-    //         <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
-    //         <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
-    //         <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
-
-    //         <div className="h-[1px] w-full bg-gray-400 my-2" />
-
-    //         {isLoading
-   // //           ? <Loader />
-    //           : (
-    //             <button
-    //               type="button"
-    //               onClick={handleSubmit}
-    //               className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
-    //             >
-    //               Send now
-    //             </button>
-    //           )}
-    //       </div>
-
   return (
     <div className="relative gradient-bg-welcome h-screen flex flex-col justify-center text-white items-center ">
       <div className="md:flex-[0.5] flex-initial justify-center items-center absolute top-0 left-80">
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <div
-        className=" p-8 rounded-md shadow-md gradient-bg-welcome "
+        className=" p-8 rounded-md shadow-md gradient-bg-welcome absolute top-[200px] "
         style={{ height: '300px' ,width: '600px'  }}
       >
-    <h2 className="text-3xl mb-6 font-bold">User Signup</h2>
+    <h2 className="text-3xl mb-6 font-bold">Verification</h2>
 
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
@@ -58,14 +32,36 @@ const UserSignup = () => {
           />
         </div>
         <div className="mb-6">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
-            Email
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="docID">
+            Document ID
           </label>
           <input
             className="border rounded-md w-full py-2 px-3"
             type="text"
-            id="name"
-            placeholder="Enter your email"
+            id="docID"
+            placeholder="Enter your document ID"
+          />
+        </div>
+        <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="docType">
+            Document Type
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="text"
+            id="docType"
+            placeholder="Enter your document Type"
+          />
+        </div>
+        <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="org">
+            Organization
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="text"
+            id="org"
+            placeholder="Enter name of Organization"
           />
         </div>
         <div className="mb-6">
@@ -82,10 +78,10 @@ const UserSignup = () => {
         <Link to="/Loadingpage" >
                 <button
           className="bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer"
-          onClick={connectWallet}
+          onClick={verify}
         >
 
-          Sign Up
+          Verify
         </button>
         </Link>
       </div>
@@ -93,4 +89,4 @@ const UserSignup = () => {
   );
 };
 
-export default UserSignup;
+export default Verification;
