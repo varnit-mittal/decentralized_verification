@@ -14,13 +14,13 @@ contract user{
 
     organization org= new organization();
 
-    function getDocs() public view returns(organization.doc_info[] memory){
-        return org.fetchSpecific(msg.sender);
+    function getDocs(address _ass) public view returns(organization.doc_info[] memory){
+        return org.fetchSpecific(_ass);
     }
 
-    function registerUser(string memory _name, string memory _email, string memory _dob) public{
-        users[msg.sender].name = _name;
-        users[msg.sender].email = _email;
-        users[msg.sender].dob = _dob;
+    function registerUser(string memory _name, string memory _email, string memory _dob,address _ass) public{
+        users[_ass].name = _name;
+        users[_ass].email = _email;
+        users[_ass].dob = _dob;
     }
 }

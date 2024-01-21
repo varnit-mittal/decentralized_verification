@@ -1,10 +1,30 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Navbar } from "../components";
-
+import {ethers} from 'ethers';
+import OrgAbi from '../../abi/organization.json'
 //IMPORT LINKK
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+const RPC=import.meta.env.VITE_RPC;
+const ORGADDR=import.meta.env.VITE_ORG;
 const DashboardOrg = () => {
+const [user,setUser]=React.useState("");
+  const fun=async ()=>{
+    if(window.ethereum)
+    {
+      console.log(!111111);
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const provider=new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner()
+      const contract=new ethers.Contract(ORGADDR,OrgAbi,signer);
+      const user=await contract.getName(ethers.utils.getAddress(accounts[0]));
+      // const user=await contract.userType(ethers.utils.getAddress(accounts[0]));
+      setUser(user);
+      console.log(user);    
+      return user;
+    }
+  }
+  fun();
   const issuedDocuments = ["Document 1", "Document 2", "Document 3"];
   return (
     <div className="relative gradient-bg-welcome w-full h-screen flex flex-col items-center ">
@@ -12,10 +32,9 @@ const DashboardOrg = () => {
         <Navbar/>
       </div>
       <h2 className="text-5xl mb-4 font-bold absolute top-60 left-40 text-white">
-        Welcome, IIITB! 🙏
-      </h2>
      
-     
+     Welcome, {user}
+     </h2>
       <div className="text-left text-2xl absolute bottom-40  flex justify-between text-black">
       <div className="text-left text-3xl text-white font-semibold mb-4 absolute w-full bottom-[130%] left-[10%]">
         <p>
