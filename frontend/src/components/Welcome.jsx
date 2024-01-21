@@ -15,6 +15,11 @@ const Welcome=()=>{
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setWalletAddress(accounts[0]);
       }
+      else
+      {
+        window.alert('Please install MetaMask');
+        window.location.assign("https://metamask.io/download/");
+      }
   }
   return(
     <div className="flex w-full justify-center items-center">
