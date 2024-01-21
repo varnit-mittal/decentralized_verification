@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Footer, Services, Transactions } from "../components"
+import { Navbar, Welcome, Footer, Services } from "../components"
 
 const Landingpage = () =>{
 
@@ -6,13 +6,19 @@ const Landingpage = () =>{
     <>
       <div className="min-h-screen">
         <div className="gradient-bg-welcome">
-          <Navbar/>
+     
+          <Navbar value={"true"}/>
           <Welcome/>
+        
+        
         </div>
-        <Services/>
-        <Transactions/>
+        <div id="wwd">
+        <Services />
+      
         <Footer/>
+        </div>
       </div>
+    
     </>
   )
 }
