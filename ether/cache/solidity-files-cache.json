@@ -74,8 +74,8 @@
       ]
     },
     "F:\\decentralized_verification\\ether\\contracts\\user.sol": {
-      "lastModificationDate": 1705828184942,
-      "contentHash": "c30c51c541e623fd1e719ed4f0a23d12",
+      "lastModificationDate": 1705840361699,
+      "contentHash": "ddd13e70668ac3ae20676979afb77f99",
       "sourceName": "contracts/user.sol",
       "solcConfig": {
         "version": "0.8.19",

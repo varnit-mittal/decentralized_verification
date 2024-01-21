@@ -4,7 +4,7 @@ pragma solidity >=0.8.0;
 import "./organization.sol";
 
 contract user{
-    struct internal user_info{
+    struct user_info{
         string name;
         string email;
         string dob;
